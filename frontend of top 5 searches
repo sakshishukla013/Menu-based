@@ -2,132 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Task</title>
+    <title>Search Engine Scraper</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <style>
-        /* Reset some basic styles */
-        body, h1, p {
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
             margin: 0;
             padding: 0;
-        }
-
-        /* Set up the body with a new background color */
-        body {
-            background-color: #2E3B4E; /* Dark blue background */
-            color: #FFFFFF; /* White text color */
-            font-family: 'Arial', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            color: #333;
         }
-
-        /* Container for the whole page */
         .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
             text-align: center;
         }
-
-        /* Title style */
         h1 {
+            color: #4a90e2;
+            margin-bottom: 25px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        input[type="text"] {
+            width: 90%;
+            padding: 14px;
+            border-radius: 30px;
+            border: 1px solid #ccc;
             margin-bottom: 20px;
+            font-size: 16px;
+            outline: none;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
-        /* Grid container */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+        input[type="text"]:focus {
+            border-color: #4a90e2;
+            box-shadow: 0 0 8px rgba(74, 144, 226, 0.2);
         }
-
-        /* Grid item style */
-        .grid-item {
-            background-color: #4E5D6C; /* Darker blue color */
-            padding: 30px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, background-color 0.3s;
+        button {
+            background-color: #4a90e2;
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            padding: 14px 32px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
         }
-
-        /* Icon style */
-        .grid-item i {
-            font-size: 2em;
-            margin-bottom: 10px;
-            color: #FFDD57; /* Yellow color for icons */
+        button:hover {
+            background-color: #357abd;
+            transform: scale(1.05);
         }
-
-        /* Text style */
-        .grid-item p {
-            font-size: 1.2em;
-            color: #FFFFFF;
+        .results {
+            margin-top: 30px;
+            text-align: left;
         }
-
-        /* Hover effects */
-        .grid-item:hover {
-            transform: translateY(-5px);
-            background-color: #65758A; /* Slightly lighter blue on hover */
+        .result {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .result:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .result a {
+            text-decoration: none;
+            color: #4a90e2;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .result a:hover {
+            text-decoration: underline;
+            color: #357abd;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>PYTHON TASK</h1>
-        <div class="grid">
-            <div class="grid-item">
-                <i class="fas fa-envelope"></i>
-                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/email1.html">
-                <p>Send Email</p>
-                </a>
-            </div>
-            <div class="grid-item">
-                <i class="fas fa-envelope-open-text"></i>
-                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/bulk_email1.html">
-                <p>Send Bulk Email</p>
-                </a>
-            </div>
-            <div class="grid-item">
-                <i class="fas fa-sms"></i>
-                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/sms.html">
-                <p>Send SMS</p>
-                </a>
-            </div>
-            <div class="grid-item">
-                <i class="fas fa-volume-up"></i>
-                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/texttospeech1.html">
-                <p>Text-to-Speech</p>
-                </a>
-            </div>
-            <div class="grid-item">
-                <i class="fas fa-volume-mute"></i>
-                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/volume.html">
-                <p>Control Volume</p>
-                </a>
-            </div>
-            <div class="grid-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/template/geolcation1.html">
-                <p>Geolocation</p>
-                </a>
-            </div>
-            <div class="grid-item">
-                <i class="fas fa-mobile-alt"></i>
-                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/call1.html">
-                <p>Call Someone</p>
-                </a>
-            </div>
-            <div class="grid-item">
-                <i class="fas fa-search"></i>
-                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/search1.html">
-                <p>Top-5 Google Search</p>
-                </a>
-            </div>
-        </div>
+        <h1>Menu Search Scraper</h1>
+        <form id="search-form">
+            <input type="text" id="query" placeholder="Enter your search query" required>
+            <button type="submit">Search</button>
+        </form>
+        <div class="results" id="results"></div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#search-form').on('submit', function(e) {
+                e.preventDefault();
+                let query = $('#query').val();
+                
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://127.0.0.1:80/search',
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    data: JSON.stringify({ query: query }),
+                    success: function(response) {
+                        $('#results').empty();
+                        response.forEach(function(result) {
+                            $('#results').append(
+                                `<div class="result">
+                                    <a href="${result.link}" target="_blank">${result.title}</a>
+                                </div>`
+                            );
+                        });
+                    },
+                    error: function(error) {
+                        $('#results').text('An error occurred. Please try again.');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
