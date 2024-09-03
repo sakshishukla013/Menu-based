@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Task</title>
+    <style>
+        /* Reset some basic styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set up the body with a new background color */
+        body {
+            background-color: #2E3B4E; /* Dark blue background */
+            color: #FFFFFF; /* White text color */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container for the whole page */
+        .container {
+            text-align: center;
+        }
+
+        /* Title style */
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        /* Grid container */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Grid item style */
+        .grid-item {
+            background-color: #4E5D6C; /* Darker blue color */
+            padding: 30px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        /* Icon style */
+        .grid-item i {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #FFDD57; /* Yellow color for icons */
+        }
+
+        /* Text style */
+        .grid-item p {
+            font-size: 1.2em;
+            color: #FFFFFF;
+        }
+
+        /* Hover effects */
+        .grid-item:hover {
+            transform: translateY(-5px);
+            background-color: #65758A; /* Slightly lighter blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PYTHON TASK</h1>
+        <div class="grid">
+            <div class="grid-item">
+                <i class="fas fa-envelope"></i>
+                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/email1.html">
+                <p>Send Email</p>
+                </a>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-envelope-open-text"></i>
+                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/bulk_email1.html">
+                <p>Send Bulk Email</p>
+                </a>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-sms"></i>
+                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/sms.html">
+                <p>Send SMS</p>
+                </a>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-volume-up"></i>
+                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/texttospeech1.html">
+                <p>Text-to-Speech</p>
+                </a>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-volume-mute"></i>
+                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/volume.html">
+                <p>Control Volume</p>
+                </a>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/template/geolcation1.html">
+                <p>Geolocation</p>
+                </a>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-mobile-alt"></i>
+                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/call1.html">
+                <p>Call Someone</p>
+                </a>
+            </div>
+            <div class="grid-item">
+                <i class="fas fa-search"></i>
+                <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/menubased/search1.html">
+                <p>Top-5 Google Search</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
